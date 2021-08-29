@@ -27,5 +27,17 @@ app.use("/notes", getNotesByUserId, notesRouter);
 app.use(routeNotFound);
 app.use(defaultErrorHandler);
 
-connectToAtlas();
-app.listen(process.env.PORT, () => console.log("Server running at 5000."));
+mongoose.set("useCreateIndex", true);
+async function connect() {
+  try {
+    await mongoose.connect(process.env.CONNECTION_URL, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    });
+    console.log("Connected to atlas.");
+  } catch (error) {
+    console.log(error);
+  }
+}
+app.listen(process.env.PORT || 5000, () => console.log("Server up on 5000."));
+connect();
