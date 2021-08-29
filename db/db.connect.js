@@ -9,9 +9,7 @@ function connectToAtlas(app) {
       useUnifiedTopology: true,
     })
     .then(() => {
-      app.listen(process.env.PORT, () =>
-        console.log("Server running at 5000.")
-      );
+      console.log("Connected to atlas.");
     })
     .catch((error) => console.log({ error }));
 

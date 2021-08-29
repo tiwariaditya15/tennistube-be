@@ -51,7 +51,7 @@ const signUp = async (req, res) => {
       const errors = Object.keys(err.errors).map((error) => {
         return err.errors[error].properties.message;
       });
-      return res.json({ status: 400, errors });
+      return res.json({ status: 400, error: errors });
     }
     // todo: recheck this condition, not sure when would this reach
     return res.json({ status: 500, error: "Internal Error" });

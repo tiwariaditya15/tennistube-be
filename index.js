@@ -27,4 +27,5 @@ app.use("/notes", getNotesByUserId, notesRouter);
 app.use(routeNotFound);
 app.use(defaultErrorHandler);
 
-connectToAtlas(app);
+connectToAtlas();
+app.listen(process.env.PORT, () => console.log("Server running at 5000."));
