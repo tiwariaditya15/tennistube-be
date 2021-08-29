@@ -39,5 +39,6 @@ async function connect() {
     console.log(error);
   }
 }
+console.log("Here>>");
 app.listen(process.env.PORT || 5000, () => console.log("Server up on 5000."));
 connect();
