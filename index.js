@@ -40,7 +40,7 @@ async function connect() {
     console.log(error);
   }
 }
-app.listen(process.env.PORT || 5000, () => console.log("Server up on 5000."));
+app.listen(process.env.PORT || 10000, () => console.log("Server up on 5000."));
 connect();
 
 console.log(">> index.js");
