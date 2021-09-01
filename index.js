@@ -42,4 +42,5 @@ async function connect() {
 }
 app.listen(process.env.PORT || 5000, () => console.log("Server up on 5000."));
 connect();
-console.log("index.js");
+
+console.log(">> index.js");
