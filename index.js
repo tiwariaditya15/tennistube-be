@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const { connectToAtlas } = require("./db/db.connect");
 const videoRouter = require("./routes/videos.router");
 const playlistsRouter = require("./routes/playlists.router");
 const authenticationRouter = require("./routes/authentication.router");
